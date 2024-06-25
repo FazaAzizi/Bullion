@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB68681E8B7CF3E1AA1FE98 /* Pods_Bullion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */; };
 		A70194662C2ACA8F00FCD22E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194652C2ACA8F00FCD22E /* AppDelegate.swift */; };
 		A70194682C2ACA8F00FCD22E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194672C2ACA8F00FCD22E /* SceneDelegate.swift */; };
 		A701946A2C2ACA8F00FCD22E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194692C2ACA8F00FCD22E /* ViewController.swift */; };
@@ -49,6 +50,9 @@
 		A70194822C2ACA9000FCD22E /* BullionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70194862C2ACA9000FCD22E /* BullionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullionUITests.swift; sourceTree = "<group>"; };
 		A70194882C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.debug.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.debug.xcconfig"; sourceTree = "<group>"; };
+		D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.release.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB68681E8B7CF3E1AA1FE98 /* Pods_Bullion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FD9D5E9507B25CAB813AFE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */,
+				D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		467D5393A3E48447FBDABACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A70194592C2ACA8F00FCD22E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				A701947B2C2ACA9000FCD22E /* BullionTests */,
 				A70194852C2ACA9000FCD22E /* BullionUITests */,
 				A70194632C2ACA8F00FCD22E /* Products */,
+				2FD9D5E9507B25CAB813AFE2 /* Pods */,
+				467D5393A3E48447FBDABACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A701948C2C2ACA9000FCD22E /* Build configuration list for PBXNativeTarget "Bullion" */;
 			buildPhases = (
+				54B99B23A8DE070DE97CA409 /* [CP] Check Pods Manifest.lock */,
 				A701945E2C2ACA8F00FCD22E /* Sources */,
 				A701945F2C2ACA8F00FCD22E /* Frameworks */,
 				A70194602C2ACA8F00FCD22E /* Resources */,
+				8F7EA9A779702C8A18407AA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54B99B23A8DE070DE97CA409 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bullion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F7EA9A779702C8A18407AA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bullion/Pods-Bullion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bullion/Pods-Bullion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bullion/Pods-Bullion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A701945E2C2ACA8F00FCD22E /* Sources */ = {
@@ -437,6 +506,7 @@
 		};
 		A701948D2C2ACA9000FCD22E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -465,6 +535,7 @@
 		};
 		A701948E2C2ACA9000FCD22E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
