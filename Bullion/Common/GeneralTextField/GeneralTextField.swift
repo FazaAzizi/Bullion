@@ -37,27 +37,36 @@ extension GeneralTextField {
     func configure(
         title: String,
         placeHolderText: String,
+        value: String = "",
         type: GeneralTextFieldType = .normal
     ) {
         switch type {
         case .normal:
             calendarImgVw.isHidden = true
             containerImgView.isHidden = true
+            textField.isEnabled = true
             break
         case .password:
             calendarImgVw.isHidden = true
             containerImgView.isHidden = false
+            textField.isEnabled = true
         case .calendar:
             calendarImgVw.isHidden = false
             containerImgView.isHidden = true
+            textField.isEnabled = false
         case .link:
             containerImgView.isHidden = false
             calendarImgVw.isHidden = true
+            textField.isEnabled = false
             eyeImgVw.image = UIImage(named: "ic_attechment")
         }
         
         titleTxtField.text = title
         titleTxtField.backgroundColor = UIColor.clear
+        
+        if value != "" {
+            textField.text = value
+        }
         
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.placeholder,

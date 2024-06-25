@@ -20,10 +20,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormUserView" customModule="Bullion" customModuleProvider="target">
             <connections>
                 <outlet property="backImgVw" destination="Web-ds-gIY" id="ajd-Jc-vmg"/>
+                <outlet property="boxFemaleImgVw" destination="XpH-kV-1gp" id="o75-5q-kkQ"/>
+                <outlet property="boxMaleImgVw" destination="dXO-jG-eUR" id="5ev-Lx-W3l"/>
                 <outlet property="confirmPasswordTxtField" destination="oql-IP-wcX" id="n2z-Ef-ozJ"/>
                 <outlet property="containerView" destination="Ffl-PE-fPI" id="bIH-0C-b2r"/>
                 <outlet property="dobTxtField" destination="hIP-KP-JPp" id="Ezk-MQ-jWf"/>
                 <outlet property="emailTxtField" destination="aWE-9c-qJB" id="RSP-Wd-nhK"/>
+                <outlet property="femaleGenderView" destination="0z1-wH-tKn" id="qN0-Cv-HHZ"/>
+                <outlet property="maleGenderView" destination="eSr-eb-be9" id="ooH-ux-XU3"/>
                 <outlet property="nameTxtField" destination="RaL-M8-zYc" id="Hj4-DM-wdi"/>
                 <outlet property="passwordTxtField" destination="QVD-wD-K7i" id="K1N-wJ-O5F"/>
                 <outlet property="phoneNumbTxtField" destination="emq-Ci-YME" id="Kwi-t9-33Y"/>
@@ -83,8 +87,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-Yp-Qp6">
                                             <rect key="frame" x="20" y="94" width="353" height="50"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba9-FJ-z5i" customClass="GradientLabel" customModule="Bullion" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba9-FJ-z5i" customClass="GradientLabel" customModule="Bullion" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="22"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                                     <color key="textColor" name="wording_gradient_second"/>
                                                     <nil key="highlightedColor"/>

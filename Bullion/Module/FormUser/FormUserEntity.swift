@@ -10,3 +10,8 @@ import Foundation
 struct FormUserEntity {
     
 }
+
+enum FormUserType {
+    case add
+    case edit
+}

@@ -27,12 +27,12 @@ class HomeRouter {
     }
     
     func goToEditData(nav: UINavigationController, data: UserModel) {
-        let vc = FormUserRouter().showView()
+        let vc = FormUserRouter().showView(type: .edit, data: data)
         nav.pushViewController(vc, animated: true)
     }
     
     func goToAddData(nav: UINavigationController) {
-        let vc = FormUserRouter().showView()
+        let vc = FormUserRouter().showView(type: .add)
         nav.pushViewController(vc, animated: true)
     }
     

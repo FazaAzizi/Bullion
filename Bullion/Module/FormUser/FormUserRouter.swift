@@ -9,28 +9,11 @@ import UIKit
 
 class FormUserRouter {
     
-    func showView() -> FormUserView {
+    func showView(type: FormUserType, data: UserModel? = nil) -> FormUserView {
         let interactor = FormUserInteractor()
-        let presenter = FormUserPresenter(interactor: interactor)
+        let presenter = FormUserPresenter(interactor: interactor, data: data, type: type)
         let view = FormUserView(nibName: String(describing: FormUserView.self), bundle: nil)
         view.presenter = presenter
         return view
     }
-    
-    //Navigate to other xib-based router
-    /*
-    func navigateToOtherView(from navigation: UINavigationController, with data: Any) {
-        let otherView = OtherViewRouter().showView(with: data)
-        navigation.pushViewController(otherView, animated: true)
-    }
-    */
-    
-    //Navigate to other storyboard-based router
-    /*
-    func navigateToOtherView(from navigation: UINavigationController, with data: Any) {
-        let otherView = OtherViewRouter().showView(with: data)
-        navigation.pushViewController(otherView, animated: true)
-    }
-     */
-    
 }
