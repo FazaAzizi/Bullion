@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class HomeView: UIViewController {
     
@@ -17,6 +18,8 @@ class HomeView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: HomePresenter?
+    var anyCancellable = Set<AnyCancellable>()
+    var userList: [UserModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +49,8 @@ extension HomeView {
         
         setupTableView()
         setupCollectionView()
+        setupAction()
+        bindingData()
     }
     
     private func setupTableView() {
@@ -66,17 +71,43 @@ extension HomeView {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         collectionView.collectionViewLayout = layout
     }
+    
+    private func bindingData() {
+        guard let presenter = self.presenter else { return }
+        presenter.$usersList
+            .sink { [weak self] data in
+                guard let self else { return }
+                self.userList = data
+                self.tableView.reloadData()
+            }
+            .store(in: &anyCancellable)
+    }
+    
+    private func setupAction() {
+        logoutLbl.gesture()
+            .sink { [weak self] _ in
+                guard let self = self,
+                      let presenter = self.presenter,
+                      let nav = self.navigationController
+                else { return }
+                presenter.logOut(nav: nav)
+            }
+            .store(in: &anyCancellable)
+    }
 }
 
 extension HomeView: GeneralButtonDelegate {
     func didTapButton(_ view: UIView) {
-        self.navigationController?.popViewController(animated: false)
+        guard let presenter = self.presenter,
+              let nav = self.navigationController
+        else { return }
+        presenter.goToAddData(nav: nav)
     }
 }
 
 extension HomeView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return userList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,6 +116,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        cell.configureCell(data: userList[indexPath.row])
         return cell
     }
     
@@ -97,10 +129,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
               let presenter
         else {return}
         
-        let popupDetail = PopupDetail(nibName: String(describing: PopupDetail.self), bundle: nil)
-        popupDetail.modalPresentationStyle = .overFullScreen
-        popupDetail.modalTransitionStyle = .crossDissolve
-        self.navigationController?.present(popupDetail, animated: true)
+        presenter.showPopupDetail(nav: navigation, data: userList[indexPath.row], delegate: self)
     }
 }
 
@@ -136,5 +165,15 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         let offset = scrollView.contentOffset.x + layout.sectionInset.left - 20
         let page = Int(round(offset / pageWidth))
         pageControl.currentPage = page
+    }
+}
+
+extension HomeView: PopupDetailDelegate {
+    func didTapEdit(data: UserModel) {
+        guard let presenter = self.presenter,
+              let navigationController = self.navigationController
+        else {return}
+        
+        presenter.goToEditData(nav: navigationController, data: data)
     }
 }

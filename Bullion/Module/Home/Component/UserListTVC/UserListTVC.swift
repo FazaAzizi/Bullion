@@ -33,10 +33,9 @@ class UserListTVC: UITableViewCell {
 }
 
 extension UserListTVC {
-    func configureCell(name: String, photo: String, email: String, date: String){
-        
-        nameLbl.text = name
-        dateLbl.text = date
-        emailLbl.text = email
+    func configureCell(data: UserModel){
+        nameLbl.text = data.name
+        dateLbl.text = data.dateOfBirth
+        emailLbl.text = data.email
     }
 }

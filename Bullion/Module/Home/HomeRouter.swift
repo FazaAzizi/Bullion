@@ -17,20 +17,27 @@ class HomeRouter {
         return view
     }
     
-    //Navigate to other xib-based router
-    /*
-    func navigateToOtherView(from navigation: UINavigationController, with data: Any) {
-        let otherView = OtherViewRouter().showView(with: data)
-        navigation.pushViewController(otherView, animated: true)
+    func showPopupDetail(nav: UINavigationController, data: UserModel, delegate: PopupDetailDelegate) {
+        let popupDetail = PopupDetail(nibName: String(describing: PopupDetail.self), bundle: nil)
+        popupDetail.modalPresentationStyle = .overFullScreen
+        popupDetail.modalTransitionStyle = .crossDissolve
+        popupDetail.data = data
+        popupDetail.delegate = delegate
+        nav.present(popupDetail, animated: true)
     }
-    */
     
-    //Navigate to other storyboard-based router
-    /*
-    func navigateToOtherView(from navigation: UINavigationController, with data: Any) {
-        let otherView = OtherViewRouter().showView(with: data)
-        navigation.pushViewController(otherView, animated: true)
+    func goToEditData(nav: UINavigationController, data: UserModel) {
+        let vc = FormUserRouter().showView()
+        nav.pushViewController(vc, animated: true)
     }
-     */
     
+    func goToAddData(nav: UINavigationController) {
+        let vc = FormUserRouter().showView()
+        nav.pushViewController(vc, animated: true)
+    }
+    
+    func logOut(nav: UINavigationController) {
+        let vc = LoginRouter().showView()
+        nav.pushViewController(vc, animated: true)
+    }
 }
