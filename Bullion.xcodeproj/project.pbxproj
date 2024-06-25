@@ -30,8 +30,6 @@
 		A70194B22C2ADB7800FCD22E /* GeneralTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194B12C2ADB7800FCD22E /* GeneralTextField.xib */; };
 		A70194B52C2ADB9400FCD22E /* GeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194B42C2ADB9400FCD22E /* GeneralButton.swift */; };
 		A70194B72C2ADB9D00FCD22E /* GeneralButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194B62C2ADB9D00FCD22E /* GeneralButton.xib */; };
-		A70194BA2C2ADBD500FCD22E /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194B92C2ADBD500FCD22E /* NavigationView.swift */; };
-		A70194BC2C2ADBE000FCD22E /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194BB2C2ADBE000FCD22E /* NavigationView.xib */; };
 		A70194C92C2AE0A000FCD22E /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C02C2AE0A000FCD22E /* Inter-ExtraLight.ttf */; };
 		A70194CA2C2AE0A000FCD22E /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C12C2AE0A000FCD22E /* Inter-Light.ttf */; };
 		A70194CB2C2AE0A000FCD22E /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C22C2AE0A000FCD22E /* Inter-Medium.ttf */; };
@@ -55,6 +53,14 @@
 		A70194E92C2AE0B800FCD22E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194DD2C2AE0B800FCD22E /* Roboto-Bold.ttf */; };
 		A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */; };
 		A70194EE2C2AE80700FCD22E /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194ED2C2AE80700FCD22E /* UIFont+Ext.swift */; };
+		A70194F82C2AF51500FCD22E /* FormUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194F22C2AF51500FCD22E /* FormUserPresenter.swift */; };
+		A70194F92C2AF51500FCD22E /* FormUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194F32C2AF51500FCD22E /* FormUserRouter.swift */; };
+		A70194FA2C2AF51500FCD22E /* FormUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194F42C2AF51500FCD22E /* FormUserInteractor.swift */; };
+		A70194FB2C2AF51500FCD22E /* FormUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194F52C2AF51500FCD22E /* FormUserView.swift */; };
+		A70194FC2C2AF51500FCD22E /* FormUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194F62C2AF51500FCD22E /* FormUserView.xib */; };
+		A70194FD2C2AF51500FCD22E /* FormUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194F72C2AF51500FCD22E /* FormUserEntity.swift */; };
+		A70195002C2AFB4300FCD22E /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194FF2C2AFB4300FCD22E /* GradientLabel.swift */; };
+		A70195022C2AFED400FCD22E /* GesturePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70195012C2AFED400FCD22E /* GesturePublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +107,6 @@
 		A70194B12C2ADB7800FCD22E /* GeneralTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralTextField.xib; sourceTree = "<group>"; };
 		A70194B42C2ADB9400FCD22E /* GeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButton.swift; sourceTree = "<group>"; };
 		A70194B62C2ADB9D00FCD22E /* GeneralButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralButton.xib; sourceTree = "<group>"; };
-		A70194B92C2ADBD500FCD22E /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
-		A70194BB2C2ADBE000FCD22E /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
 		A70194C02C2AE0A000FCD22E /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
 		A70194C12C2AE0A000FCD22E /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		A70194C22C2AE0A000FCD22E /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
@@ -126,6 +130,14 @@
 		A70194DD2C2AE0B800FCD22E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		A70194ED2C2AE80700FCD22E /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		A70194F22C2AF51500FCD22E /* FormUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserPresenter.swift; sourceTree = "<group>"; };
+		A70194F32C2AF51500FCD22E /* FormUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserRouter.swift; sourceTree = "<group>"; };
+		A70194F42C2AF51500FCD22E /* FormUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserInteractor.swift; sourceTree = "<group>"; };
+		A70194F52C2AF51500FCD22E /* FormUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserView.swift; sourceTree = "<group>"; };
+		A70194F62C2AF51500FCD22E /* FormUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormUserView.xib; sourceTree = "<group>"; };
+		A70194F72C2AF51500FCD22E /* FormUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserEntity.swift; sourceTree = "<group>"; };
+		A70194FF2C2AFB4300FCD22E /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		A70195012C2AFED400FCD22E /* GesturePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturePublisher.swift; sourceTree = "<group>"; };
 		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.debug.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.debug.xcconfig"; sourceTree = "<group>"; };
 		D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.release.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +256,7 @@
 				A70194AC2C2AD5ED00FCD22E /* UIColor+Ext.swift */,
 				A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */,
 				A70194ED2C2AE80700FCD22E /* UIFont+Ext.swift */,
+				A70195012C2AFED400FCD22E /* GesturePublisher.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -251,7 +264,7 @@
 		A70194972C2ACF3300FCD22E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A70194B82C2ADBBB00FCD22E /* NavigationView */,
+				A70194FE2C2AFB2800FCD22E /* GradientLabel */,
 				A70194B32C2ADB8000FCD22E /* GeneralButton */,
 				A70194AE2C2ADB4A00FCD22E /* GeneralTextField */,
 			);
@@ -261,6 +274,8 @@
 		A70194982C2ACF4200FCD22E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A70194F02C2AF4D100FCD22E /* FormUser */,
+				A70194EF2C2AF4A900FCD22E /* Home */,
 				A701949F2C2AD33600FCD22E /* Login */,
 			);
 			path = Module;
@@ -316,15 +331,6 @@
 			path = GeneralButton;
 			sourceTree = "<group>";
 		};
-		A70194B82C2ADBBB00FCD22E /* NavigationView */ = {
-			isa = PBXGroup;
-			children = (
-				A70194B92C2ADBD500FCD22E /* NavigationView.swift */,
-				A70194BB2C2ADBE000FCD22E /* NavigationView.xib */,
-			);
-			path = NavigationView;
-			sourceTree = "<group>";
-		};
 		A70194BD2C2ADFDB00FCD22E /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +373,34 @@
 				A70194DB2C2AE0B800FCD22E /* Roboto-ThinItalic.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		A70194EF2C2AF4A900FCD22E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A70194F02C2AF4D100FCD22E /* FormUser */ = {
+			isa = PBXGroup;
+			children = (
+				A70194F22C2AF51500FCD22E /* FormUserPresenter.swift */,
+				A70194F32C2AF51500FCD22E /* FormUserRouter.swift */,
+				A70194F42C2AF51500FCD22E /* FormUserInteractor.swift */,
+				A70194F52C2AF51500FCD22E /* FormUserView.swift */,
+				A70194F62C2AF51500FCD22E /* FormUserView.xib */,
+				A70194F72C2AF51500FCD22E /* FormUserEntity.swift */,
+			);
+			path = FormUser;
+			sourceTree = "<group>";
+		};
+		A70194FE2C2AFB2800FCD22E /* GradientLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A70194FF2C2AFB4300FCD22E /* GradientLabel.swift */,
+			);
+			path = GradientLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,11 +532,11 @@
 				A70194E22C2AE0B800FCD22E /* Roboto-Thin.ttf in Resources */,
 				A70194DE2C2AE0B800FCD22E /* Roboto-Light.ttf in Resources */,
 				A70194B22C2ADB7800FCD22E /* GeneralTextField.xib in Resources */,
+				A70194FC2C2AF51500FCD22E /* FormUserView.xib in Resources */,
 				A70194E02C2AE0B800FCD22E /* Roboto-Regular.ttf in Resources */,
 				A701946D2C2ACA8F00FCD22E /* Main.storyboard in Resources */,
 				A70194CB2C2AE0A000FCD22E /* Inter-Medium.ttf in Resources */,
 				A70194E32C2AE0B800FCD22E /* Roboto-MediumItalic.ttf in Resources */,
-				A70194BC2C2ADBE000FCD22E /* NavigationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,8 +603,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70194FB2C2AF51500FCD22E /* FormUserView.swift in Sources */,
 				A70194EE2C2AE80700FCD22E /* UIFont+Ext.swift in Sources */,
-				A70194BA2C2ADBD500FCD22E /* NavigationView.swift in Sources */,
+				A70194F92C2AF51500FCD22E /* FormUserRouter.swift in Sources */,
 				A70194AB2C2AD34600FCD22E /* LoginEntity.swift in Sources */,
 				A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */,
 				A70194A62C2AD34600FCD22E /* LoginPresenter.swift in Sources */,
@@ -579,12 +614,17 @@
 				A70194B52C2ADB9400FCD22E /* GeneralButton.swift in Sources */,
 				A70194B02C2ADB6900FCD22E /* GeneralTextField.swift in Sources */,
 				A70194AD2C2AD5ED00FCD22E /* UIColor+Ext.swift in Sources */,
+				A70194FD2C2AF51500FCD22E /* FormUserEntity.swift in Sources */,
 				A70194A92C2AD34600FCD22E /* LoginView.swift in Sources */,
 				A70194662C2ACA8F00FCD22E /* AppDelegate.swift in Sources */,
 				A70194A82C2AD34600FCD22E /* LoginInteractor.swift in Sources */,
 				A70194682C2ACA8F00FCD22E /* SceneDelegate.swift in Sources */,
+				A70194F82C2AF51500FCD22E /* FormUserPresenter.swift in Sources */,
 				A70194A72C2AD34600FCD22E /* LoginRouter.swift in Sources */,
+				A70195022C2AFED400FCD22E /* GesturePublisher.swift in Sources */,
 				A701949E2C2AD09800FCD22E /* Endpoint.swift in Sources */,
+				A70195002C2AFB4300FCD22E /* GradientLabel.swift in Sources */,
+				A70194FA2C2AF51500FCD22E /* FormUserInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

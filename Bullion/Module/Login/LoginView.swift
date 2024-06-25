@@ -47,6 +47,21 @@ extension LoginView {
             UIColor.orangeSecond,
             UIColor.orangeThird
         ])
+        
+        signInButton.delegate = self
+        addNewUserButton.delegate = self
+    }
+}
+
+extension LoginView: GeneralButtonDelegate {
+    func didTapButton(_ view: UIView) {
+        switch view {
+        case signInButton:
+            let view = FormUserRouter().showView()
+            self.navigationController?.pushViewController(view, animated: true)
+        case addNewUserButton: break
+        default: break
+        }
     }
 }
 

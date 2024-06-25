@@ -28,6 +28,10 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    func gesture(_ gestureType: GestureType = .tap()) -> GesturePublisher {
+        .init(view: self, gestureType: gestureType)
+    }
+    
     func makeCornerRadius(_ radius: CGFloat, _ maskedCorner: CACornerMask? = nil) {
         layer.cornerRadius = radius
         layer.maskedCorners = maskedCorner ?? [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]

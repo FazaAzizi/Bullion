@@ -8,9 +8,13 @@
 import UIKit
 
 class GeneralTextField: UIView {
-    @IBOutlet weak var titleTxtField: UILabel!
+    @IBOutlet weak var titleTxtField: GradientLabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var containerTxtField: UIView!
+    @IBOutlet weak var calendarImgVw: UIImageView!
+    @IBOutlet weak var containerImgView: UIView!
+    @IBOutlet weak var eyeImgVw: UIImageView!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,9 +36,28 @@ class GeneralTextField: UIView {
 extension GeneralTextField {
     func configure(
         title: String,
-        placeHolderText: String
+        placeHolderText: String,
+        type: GeneralTextFieldType = .normal
     ) {
+        switch type {
+        case .normal:
+            calendarImgVw.isHidden = true
+            containerImgView.isHidden = true
+            break
+        case .password:
+            calendarImgVw.isHidden = true
+            containerImgView.isHidden = false
+        case .calendar:
+            calendarImgVw.isHidden = false
+            containerImgView.isHidden = true
+        case .link:
+            containerImgView.isHidden = false
+            calendarImgVw.isHidden = true
+            eyeImgVw.image = UIImage(named: "ic_attechment")
+        }
+        
         titleTxtField.text = title
+        titleTxtField.backgroundColor = UIColor.clear
         
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.placeholder,
@@ -47,4 +70,11 @@ extension GeneralTextField {
         containerTxtField.addBorder(width: 1, colorBorder: UIColor.placeholder.cgColor)
         containerTxtField.makeCornerRadius(24)
     }
+}
+
+enum GeneralTextFieldType {
+    case normal
+    case password
+    case calendar
+    case link
 }
