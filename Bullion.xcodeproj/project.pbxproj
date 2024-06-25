@@ -17,6 +17,8 @@
 		A701947D2C2ACA9000FCD22E /* BullionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701947C2C2ACA9000FCD22E /* BullionTests.swift */; };
 		A70194872C2ACA9000FCD22E /* BullionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194862C2ACA9000FCD22E /* BullionUITests.swift */; };
 		A70194892C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194882C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift */; };
+		A701949C2C2AD08C00FCD22E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701949B2C2AD08C00FCD22E /* ApiManager.swift */; };
+		A701949E2C2AD09800FCD22E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701949D2C2AD09800FCD22E /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		A70194822C2ACA9000FCD22E /* BullionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70194862C2ACA9000FCD22E /* BullionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullionUITests.swift; sourceTree = "<group>"; };
 		A70194882C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A701949B2C2AD08C00FCD22E /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		A701949D2C2AD09800FCD22E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.debug.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.debug.xcconfig"; sourceTree = "<group>"; };
 		D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.release.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +91,6 @@
 				C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */,
 				D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,13 +127,15 @@
 		A70194642C2ACA8F00FCD22E /* Bullion */ = {
 			isa = PBXGroup;
 			children = (
-				A70194652C2ACA8F00FCD22E /* AppDelegate.swift */,
-				A70194672C2ACA8F00FCD22E /* SceneDelegate.swift */,
+				A70194952C2ACF2000FCD22E /* App */,
+				A70194972C2ACF3300FCD22E /* Common */,
+				A70194962C2ACF2900FCD22E /* Extension */,
+				A70194982C2ACF4200FCD22E /* Module */,
+				A70194992C2ACF4E00FCD22E /* Networking */,
+				A701949A2C2ACF5800FCD22E /* Resource */,
 				A70194692C2ACA8F00FCD22E /* ViewController.swift */,
-				A701946B2C2ACA8F00FCD22E /* Main.storyboard */,
-				A701946E2C2ACA9000FCD22E /* Assets.xcassets */,
 				A70194702C2ACA9000FCD22E /* LaunchScreen.storyboard */,
-				A70194732C2ACA9000FCD22E /* Info.plist */,
+				A701946B2C2ACA8F00FCD22E /* Main.storyboard */,
 			);
 			path = Bullion;
 			sourceTree = "<group>";
@@ -150,6 +155,54 @@
 				A70194882C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift */,
 			);
 			path = BullionUITests;
+			sourceTree = "<group>";
+		};
+		A70194952C2ACF2000FCD22E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A70194672C2ACA8F00FCD22E /* SceneDelegate.swift */,
+				A70194652C2ACA8F00FCD22E /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A70194962C2ACF2900FCD22E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A70194972C2ACF3300FCD22E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A70194982C2ACF4200FCD22E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A70194992C2ACF4E00FCD22E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A701949B2C2AD08C00FCD22E /* ApiManager.swift */,
+				A701949D2C2AD09800FCD22E /* Endpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A701949A2C2ACF5800FCD22E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A70194732C2ACA9000FCD22E /* Info.plist */,
+				A701946E2C2ACA9000FCD22E /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +380,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A701949C2C2AD08C00FCD22E /* ApiManager.swift in Sources */,
 				A701946A2C2ACA8F00FCD22E /* ViewController.swift in Sources */,
 				A70194662C2ACA8F00FCD22E /* AppDelegate.swift in Sources */,
 				A70194682C2ACA8F00FCD22E /* SceneDelegate.swift in Sources */,
+				A701949E2C2AD09800FCD22E /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,8 +568,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M843HJCGXQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Bullion/Info.plist;
+				INFOPLIST_FILE = Bullion/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -542,8 +598,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M843HJCGXQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Bullion/Info.plist;
+				INFOPLIST_FILE = Bullion/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
