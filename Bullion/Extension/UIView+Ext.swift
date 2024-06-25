@@ -16,6 +16,18 @@ extension UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView ?? UIView()
     }
     
+    func applyGradient(colors: [UIColor], locations: [NSNumber]? = nil) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = colors.map { $0.cgColor }
+        gradientLayer.locations = locations
+        
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
     func makeCornerRadius(_ radius: CGFloat, _ maskedCorner: CACornerMask? = nil) {
         layer.cornerRadius = radius
         layer.maskedCorners = maskedCorner ?? [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]

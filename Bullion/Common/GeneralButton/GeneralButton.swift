@@ -32,5 +32,6 @@ extension GeneralButton {
         titleLbl.text = title
         self.backgroundColor = isEnable ? UIColor.buttonBlue : UIColor.placeholder
         titleLbl.textColor = isEnable ? UIColor.titleWhite : UIColor.titleBlack
+        self.makeCornerRadius(24)
     }
 }

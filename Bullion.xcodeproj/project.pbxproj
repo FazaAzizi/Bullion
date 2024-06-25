@@ -54,6 +54,7 @@
 		A70194E82C2AE0B800FCD22E /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194DC2C2AE0B800FCD22E /* Roboto-Italic.ttf */; };
 		A70194E92C2AE0B800FCD22E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194DD2C2AE0B800FCD22E /* Roboto-Bold.ttf */; };
 		A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */; };
+		A70194EE2C2AE80700FCD22E /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194ED2C2AE80700FCD22E /* UIFont+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		A70194DC2C2AE0B800FCD22E /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		A70194DD2C2AE0B800FCD22E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		A70194ED2C2AE80700FCD22E /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.debug.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.debug.xcconfig"; sourceTree = "<group>"; };
 		D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.release.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				A70194AC2C2AD5ED00FCD22E /* UIColor+Ext.swift */,
 				A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */,
+				A70194ED2C2AE80700FCD22E /* UIFont+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70194EE2C2AE80700FCD22E /* UIFont+Ext.swift in Sources */,
 				A70194BA2C2ADBD500FCD22E /* NavigationView.swift in Sources */,
 				A70194AB2C2AD34600FCD22E /* LoginEntity.swift in Sources */,
 				A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */,
