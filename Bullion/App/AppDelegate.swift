@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        NFX.sharedInstance().start()
+
         let loginScreen = LoginRouter().showView()
         let view = UINavigationController(rootViewController: loginScreen)
         self.window?.rootViewController = view

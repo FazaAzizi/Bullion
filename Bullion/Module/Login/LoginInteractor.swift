@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 class LoginInteractor {
-    
-    // func fetchData(completion: @escaping (Result<ModelResponse, Error>) -> Void) {
-    //    api.requestApi(.exampleEndpoint, completion: completion)
-    // }
+    open var api = ApiManager()
+
+    func fetchLogin(email: String, password: String) -> AnyPublisher<LoginResponse, Error> {
+        return api.requestApiPublisher(.login(email: email, password: password.sha256()))
+    }
 }

@@ -17,20 +17,14 @@ class LoginRouter {
         return view
     }
     
-    //Navigate to other xib-based router
-    /*
-    func navigateToOtherView(from navigation: UINavigationController, with data: Any) {
-        let otherView = OtherViewRouter().showView(with: data)
-        navigation.pushViewController(otherView, animated: true)
+    func goToHome() {
+        let vc = HomeRouter().showView()
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = windowScene.windows.first {
+            window.rootViewController = vc
+            window.makeKeyAndVisible()
+        }
     }
-    */
-    
-    //Navigate to other storyboard-based router
-    /*
-    func navigateToOtherView(from navigation: UINavigationController, with data: Any) {
-        let otherView = OtherViewRouter().showView(with: data)
-        navigation.pushViewController(otherView, animated: true)
-    }
-     */
     
 }

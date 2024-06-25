@@ -13,6 +13,7 @@ protocol GeneralButtonDelegate: AnyObject {
 
 class GeneralButton: UIView {
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
     weak var delegate: GeneralButtonDelegate?
 
@@ -37,8 +38,8 @@ extension GeneralButton {
     func configure(title: String, isEnable: Bool) {
         setupAction()
         titleLbl.text = title
-        self.backgroundColor = isEnable ? UIColor.buttonBlue : UIColor.placeholder
         titleLbl.textColor = isEnable ? UIColor.titleWhite : UIColor.titleBlack
+        self.containerView.backgroundColor = isEnable ? UIColor.buttonBlue : UIColor.placeholder
         self.makeCornerRadius(24)
     }
     

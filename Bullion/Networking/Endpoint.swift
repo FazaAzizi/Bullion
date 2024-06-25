@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum Endpoint {
-    case login
+    case login(email: String, password: String)
     case register
     case getuserlist
     case getdetailuser
@@ -41,6 +41,8 @@ extension Endpoint {
 extension Endpoint {
     func method() -> HTTPMethod {
         switch self {
+        case .login:
+            return .post
         default:
             return .get
         }
@@ -51,6 +53,12 @@ extension Endpoint {
 extension Endpoint {
     var parameter: [String: Any]? {
         switch self {
+        case .login(let email, let password):
+            let params: [String: Any] = [
+                "email": email,
+                "password": password
+            ]
+            return params
         default:
             return nil
         }
