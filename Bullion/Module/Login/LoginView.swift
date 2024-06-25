@@ -9,7 +9,6 @@ import UIKit
 
 class LoginView: UIViewController {
     
-    @IBOutlet weak var backgroundGradientView: UIView!
     @IBOutlet weak var emailAddressTxtField: GeneralTextField!
     @IBOutlet weak var passwordTxtField: GeneralTextField!
     
@@ -43,7 +42,7 @@ extension LoginView {
             isEnable: true)
         
         containerView.makeCornerRadius(24, [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-        backgroundGradientView.applyGradient(colors: [
+        self.view.applyGradient(colors: [
             UIColor.orangeFiirst,
             UIColor.orangeSecond,
             UIColor.orangeThird

@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="Bullion" customModuleProvider="target">
             <connections>
                 <outlet property="addNewUserButton" destination="UgD-Ie-StF" id="Vd8-JY-5jh"/>
-                <outlet property="backgroundGradientView" destination="koA-CA-gxA" id="xwd-Nz-UNW"/>
                 <outlet property="containerView" destination="g2O-Kg-xbg" id="tzV-e0-7dV"/>
                 <outlet property="emailAddressTxtField" destination="jMm-sT-gC3" id="NMK-iA-Aqd"/>
                 <outlet property="passwordTxtField" destination="frb-QO-pVS" id="THd-g1-T7f"/>
@@ -25,10 +24,6 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koA-CA-gxA">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="481"/>
-                    <color key="backgroundColor" systemColor="systemBrownColor"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOf-hG-vzo">
                     <rect key="frame" x="0.0" y="59" width="393" height="402"/>
                     <subviews>
@@ -100,16 +95,12 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="g2O-Kg-xbg" firstAttribute="top" secondItem="uOf-hG-vzo" secondAttribute="bottom" id="1sb-Xy-fxV"/>
-                <constraint firstItem="koA-CA-gxA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3Jw-y4-192"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uOf-hG-vzo" secondAttribute="trailing" id="MRM-JM-XlM"/>
                 <constraint firstItem="uOf-hG-vzo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dQz-d6-M3V"/>
-                <constraint firstItem="koA-CA-gxA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fRL-ss-4K4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g2O-Kg-xbg" secondAttribute="trailing" id="kvk-ox-coE"/>
                 <constraint firstItem="g2O-Kg-xbg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="m1y-ph-BG9"/>
                 <constraint firstAttribute="bottom" secondItem="g2O-Kg-xbg" secondAttribute="bottom" id="qWA-2e-5Ha"/>
                 <constraint firstItem="uOf-hG-vzo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rSZ-Op-hRS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="koA-CA-gxA" secondAttribute="trailing" id="vO6-Eh-iwy"/>
-                <constraint firstItem="g2O-Kg-xbg" firstAttribute="top" secondItem="koA-CA-gxA" secondAttribute="bottom" constant="-20" id="vwL-np-nNJ"/>
             </constraints>
             <point key="canvasLocation" x="108" y="20"/>
         </view>
@@ -121,9 +112,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
