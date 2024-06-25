@@ -69,6 +69,8 @@
 		A776BFCB2C2B07A4004B08D3 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776BFC52C2B07A3004B08D3 /* HomeEntity.swift */; };
 		A789C7662C2B353400EB9968 /* NewsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C7642C2B353400EB9968 /* NewsCVC.swift */; };
 		A789C7672C2B353400EB9968 /* NewsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789C7652C2B353400EB9968 /* NewsCVC.xib */; };
+		A789C76B2C2B3D4700EB9968 /* PopupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C7692C2B3D4700EB9968 /* PopupDetail.swift */; };
+		A789C76C2C2B3D4700EB9968 /* PopupDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789C76A2C2B3D4700EB9968 /* PopupDetail.xib */; };
 		A78AA4382C2B107100A63D1C /* UserListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78AA4362C2B107100A63D1C /* UserListTVC.swift */; };
 		A78AA4392C2B107100A63D1C /* UserListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78AA4372C2B107100A63D1C /* UserListTVC.xib */; };
 /* End PBXBuildFile section */
@@ -156,6 +158,8 @@
 		A776BFC52C2B07A3004B08D3 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		A789C7642C2B353400EB9968 /* NewsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCVC.swift; sourceTree = "<group>"; };
 		A789C7652C2B353400EB9968 /* NewsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCVC.xib; sourceTree = "<group>"; };
+		A789C7692C2B3D4700EB9968 /* PopupDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDetail.swift; sourceTree = "<group>"; };
+		A789C76A2C2B3D4700EB9968 /* PopupDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupDetail.xib; sourceTree = "<group>"; };
 		A78AA4362C2B107100A63D1C /* UserListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTVC.swift; sourceTree = "<group>"; };
 		A78AA4372C2B107100A63D1C /* UserListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTVC.xib; sourceTree = "<group>"; };
 		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -430,9 +434,19 @@
 			path = GradientLabel;
 			sourceTree = "<group>";
 		};
+		A789C7682C2B3C7400EB9968 /* PopupDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A789C7692C2B3D4700EB9968 /* PopupDetail.swift */,
+				A789C76A2C2B3D4700EB9968 /* PopupDetail.xib */,
+			);
+			path = PopupDetail;
+			sourceTree = "<group>";
+		};
 		A78AA4332C2B102F00A63D1C /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A789C7682C2B3C7400EB9968 /* PopupDetail */,
 				A78AA4352C2B105300A63D1C /* NewsCVC */,
 				A78AA4342C2B103A00A63D1C /* UserListTVC */,
 			);
@@ -570,6 +584,7 @@
 				A70194CF2C2AE0A000FCD22E /* Inter-ExtraBold.ttf in Resources */,
 				A70194E62C2AE0B800FCD22E /* Roboto-Medium.ttf in Resources */,
 				A78AA4392C2B107100A63D1C /* UserListTVC.xib in Resources */,
+				A789C76C2C2B3D4700EB9968 /* PopupDetail.xib in Resources */,
 				A70194CC2C2AE0A000FCD22E /* Inter-SemiBold.ttf in Resources */,
 				A70194B72C2ADB9D00FCD22E /* GeneralButton.xib in Resources */,
 				A70194E12C2AE0B800FCD22E /* Roboto-BlackItalic.ttf in Resources */,
@@ -685,6 +700,7 @@
 				A70194682C2ACA8F00FCD22E /* SceneDelegate.swift in Sources */,
 				A70194F82C2AF51500FCD22E /* FormUserPresenter.swift in Sources */,
 				A70194A72C2AD34600FCD22E /* LoginRouter.swift in Sources */,
+				A789C76B2C2B3D4700EB9968 /* PopupDetail.swift in Sources */,
 				A70195022C2AFED400FCD22E /* GesturePublisher.swift in Sources */,
 				A701949E2C2AD09800FCD22E /* Endpoint.swift in Sources */,
 				A70195002C2AFB4300FCD22E /* GradientLabel.swift in Sources */,

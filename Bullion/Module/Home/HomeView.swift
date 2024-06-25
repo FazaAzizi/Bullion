@@ -97,6 +97,10 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
               let presenter
         else {return}
         
+        let popupDetail = PopupDetail(nibName: String(describing: PopupDetail.self), bundle: nil)
+        popupDetail.modalPresentationStyle = .overFullScreen
+        popupDetail.modalTransitionStyle = .crossDissolve
+        self.navigationController?.present(popupDetail, animated: true)
     }
 }
 
