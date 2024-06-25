@@ -19,6 +19,41 @@
 		A70194892C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194882C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift */; };
 		A701949C2C2AD08C00FCD22E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701949B2C2AD08C00FCD22E /* ApiManager.swift */; };
 		A701949E2C2AD09800FCD22E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A701949D2C2AD09800FCD22E /* Endpoint.swift */; };
+		A70194A62C2AD34600FCD22E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194A02C2AD34600FCD22E /* LoginPresenter.swift */; };
+		A70194A72C2AD34600FCD22E /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194A12C2AD34600FCD22E /* LoginRouter.swift */; };
+		A70194A82C2AD34600FCD22E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194A22C2AD34600FCD22E /* LoginInteractor.swift */; };
+		A70194A92C2AD34600FCD22E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194A32C2AD34600FCD22E /* LoginView.swift */; };
+		A70194AA2C2AD34600FCD22E /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194A42C2AD34600FCD22E /* LoginView.xib */; };
+		A70194AB2C2AD34600FCD22E /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194A52C2AD34600FCD22E /* LoginEntity.swift */; };
+		A70194AD2C2AD5ED00FCD22E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194AC2C2AD5ED00FCD22E /* UIColor+Ext.swift */; };
+		A70194B02C2ADB6900FCD22E /* GeneralTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194AF2C2ADB6900FCD22E /* GeneralTextField.swift */; };
+		A70194B22C2ADB7800FCD22E /* GeneralTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194B12C2ADB7800FCD22E /* GeneralTextField.xib */; };
+		A70194B52C2ADB9400FCD22E /* GeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194B42C2ADB9400FCD22E /* GeneralButton.swift */; };
+		A70194B72C2ADB9D00FCD22E /* GeneralButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194B62C2ADB9D00FCD22E /* GeneralButton.xib */; };
+		A70194BA2C2ADBD500FCD22E /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194B92C2ADBD500FCD22E /* NavigationView.swift */; };
+		A70194BC2C2ADBE000FCD22E /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70194BB2C2ADBE000FCD22E /* NavigationView.xib */; };
+		A70194C92C2AE0A000FCD22E /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C02C2AE0A000FCD22E /* Inter-ExtraLight.ttf */; };
+		A70194CA2C2AE0A000FCD22E /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C12C2AE0A000FCD22E /* Inter-Light.ttf */; };
+		A70194CB2C2AE0A000FCD22E /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C22C2AE0A000FCD22E /* Inter-Medium.ttf */; };
+		A70194CC2C2AE0A000FCD22E /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C32C2AE0A000FCD22E /* Inter-SemiBold.ttf */; };
+		A70194CD2C2AE0A000FCD22E /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C42C2AE0A000FCD22E /* Inter-Bold.ttf */; };
+		A70194CE2C2AE0A000FCD22E /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C52C2AE0A000FCD22E /* Inter-Regular.ttf */; };
+		A70194CF2C2AE0A000FCD22E /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C62C2AE0A000FCD22E /* Inter-ExtraBold.ttf */; };
+		A70194D02C2AE0A000FCD22E /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C72C2AE0A000FCD22E /* Inter-Thin.ttf */; };
+		A70194D12C2AE0A000FCD22E /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194C82C2AE0A000FCD22E /* Inter-Black.ttf */; };
+		A70194DE2C2AE0B800FCD22E /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D22C2AE0B700FCD22E /* Roboto-Light.ttf */; };
+		A70194DF2C2AE0B800FCD22E /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D32C2AE0B700FCD22E /* Roboto-BoldItalic.ttf */; };
+		A70194E02C2AE0B800FCD22E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D42C2AE0B700FCD22E /* Roboto-Regular.ttf */; };
+		A70194E12C2AE0B800FCD22E /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D52C2AE0B700FCD22E /* Roboto-BlackItalic.ttf */; };
+		A70194E22C2AE0B800FCD22E /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D62C2AE0B700FCD22E /* Roboto-Thin.ttf */; };
+		A70194E32C2AE0B800FCD22E /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D72C2AE0B700FCD22E /* Roboto-MediumItalic.ttf */; };
+		A70194E42C2AE0B800FCD22E /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D82C2AE0B700FCD22E /* Roboto-LightItalic.ttf */; };
+		A70194E52C2AE0B800FCD22E /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194D92C2AE0B700FCD22E /* Roboto-Black.ttf */; };
+		A70194E62C2AE0B800FCD22E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194DA2C2AE0B800FCD22E /* Roboto-Medium.ttf */; };
+		A70194E72C2AE0B800FCD22E /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194DB2C2AE0B800FCD22E /* Roboto-ThinItalic.ttf */; };
+		A70194E82C2AE0B800FCD22E /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194DC2C2AE0B800FCD22E /* Roboto-Italic.ttf */; };
+		A70194E92C2AE0B800FCD22E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70194DD2C2AE0B800FCD22E /* Roboto-Bold.ttf */; };
+		A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +89,41 @@
 		A70194882C2ACA9000FCD22E /* BullionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A701949B2C2AD08C00FCD22E /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		A701949D2C2AD09800FCD22E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A70194A02C2AD34600FCD22E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		A70194A12C2AD34600FCD22E /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		A70194A22C2AD34600FCD22E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		A70194A32C2AD34600FCD22E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A70194A42C2AD34600FCD22E /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		A70194A52C2AD34600FCD22E /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		A70194AC2C2AD5ED00FCD22E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		A70194AF2C2ADB6900FCD22E /* GeneralTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTextField.swift; sourceTree = "<group>"; };
+		A70194B12C2ADB7800FCD22E /* GeneralTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralTextField.xib; sourceTree = "<group>"; };
+		A70194B42C2ADB9400FCD22E /* GeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButton.swift; sourceTree = "<group>"; };
+		A70194B62C2ADB9D00FCD22E /* GeneralButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralButton.xib; sourceTree = "<group>"; };
+		A70194B92C2ADBD500FCD22E /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		A70194BB2C2ADBE000FCD22E /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
+		A70194C02C2AE0A000FCD22E /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A70194C12C2AE0A000FCD22E /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		A70194C22C2AE0A000FCD22E /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		A70194C32C2AE0A000FCD22E /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		A70194C42C2AE0A000FCD22E /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		A70194C52C2AE0A000FCD22E /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		A70194C62C2AE0A000FCD22E /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A70194C72C2AE0A000FCD22E /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		A70194C82C2AE0A000FCD22E /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		A70194D22C2AE0B700FCD22E /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		A70194D32C2AE0B700FCD22E /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A70194D42C2AE0B700FCD22E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		A70194D52C2AE0B700FCD22E /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A70194D62C2AE0B700FCD22E /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		A70194D72C2AE0B700FCD22E /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A70194D82C2AE0B700FCD22E /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		A70194D92C2AE0B700FCD22E /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		A70194DA2C2AE0B800FCD22E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		A70194DB2C2AE0B800FCD22E /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		A70194DC2C2AE0B800FCD22E /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		A70194DD2C2AE0B800FCD22E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F85125DC854B3492628260 /* Pods-Bullion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.debug.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.debug.xcconfig"; sourceTree = "<group>"; };
 		D74A091B9B56E1B5D78A006C /* Pods-Bullion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bullion.release.xcconfig"; path = "Target Support Files/Pods-Bullion/Pods-Bullion.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +239,8 @@
 		A70194962C2ACF2900FCD22E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A70194AC2C2AD5ED00FCD22E /* UIColor+Ext.swift */,
+				A70194EA2C2AE3D900FCD22E /* UIView+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -176,6 +248,9 @@
 		A70194972C2ACF3300FCD22E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A70194B82C2ADBBB00FCD22E /* NavigationView */,
+				A70194B32C2ADB8000FCD22E /* GeneralButton */,
+				A70194AE2C2ADB4A00FCD22E /* GeneralTextField */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -183,6 +258,7 @@
 		A70194982C2ACF4200FCD22E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A701949F2C2AD33600FCD22E /* Login */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -199,10 +275,95 @@
 		A701949A2C2ACF5800FCD22E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A70194BD2C2ADFDB00FCD22E /* Font */,
 				A70194732C2ACA9000FCD22E /* Info.plist */,
 				A701946E2C2ACA9000FCD22E /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		A701949F2C2AD33600FCD22E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A70194A02C2AD34600FCD22E /* LoginPresenter.swift */,
+				A70194A12C2AD34600FCD22E /* LoginRouter.swift */,
+				A70194A22C2AD34600FCD22E /* LoginInteractor.swift */,
+				A70194A32C2AD34600FCD22E /* LoginView.swift */,
+				A70194A42C2AD34600FCD22E /* LoginView.xib */,
+				A70194A52C2AD34600FCD22E /* LoginEntity.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A70194AE2C2ADB4A00FCD22E /* GeneralTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A70194AF2C2ADB6900FCD22E /* GeneralTextField.swift */,
+				A70194B12C2ADB7800FCD22E /* GeneralTextField.xib */,
+			);
+			path = GeneralTextField;
+			sourceTree = "<group>";
+		};
+		A70194B32C2ADB8000FCD22E /* GeneralButton */ = {
+			isa = PBXGroup;
+			children = (
+				A70194B42C2ADB9400FCD22E /* GeneralButton.swift */,
+				A70194B62C2ADB9D00FCD22E /* GeneralButton.xib */,
+			);
+			path = GeneralButton;
+			sourceTree = "<group>";
+		};
+		A70194B82C2ADBBB00FCD22E /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				A70194B92C2ADBD500FCD22E /* NavigationView.swift */,
+				A70194BB2C2ADBE000FCD22E /* NavigationView.xib */,
+			);
+			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		A70194BD2C2ADFDB00FCD22E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A70194BF2C2AE08C00FCD22E /* Roboto */,
+				A70194BE2C2AE08600FCD22E /* Inter */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A70194BE2C2AE08600FCD22E /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				A70194C82C2AE0A000FCD22E /* Inter-Black.ttf */,
+				A70194C42C2AE0A000FCD22E /* Inter-Bold.ttf */,
+				A70194C62C2AE0A000FCD22E /* Inter-ExtraBold.ttf */,
+				A70194C02C2AE0A000FCD22E /* Inter-ExtraLight.ttf */,
+				A70194C12C2AE0A000FCD22E /* Inter-Light.ttf */,
+				A70194C22C2AE0A000FCD22E /* Inter-Medium.ttf */,
+				A70194C52C2AE0A000FCD22E /* Inter-Regular.ttf */,
+				A70194C32C2AE0A000FCD22E /* Inter-SemiBold.ttf */,
+				A70194C72C2AE0A000FCD22E /* Inter-Thin.ttf */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
+		A70194BF2C2AE08C00FCD22E /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				A70194D92C2AE0B700FCD22E /* Roboto-Black.ttf */,
+				A70194D52C2AE0B700FCD22E /* Roboto-BlackItalic.ttf */,
+				A70194DD2C2AE0B800FCD22E /* Roboto-Bold.ttf */,
+				A70194D32C2AE0B700FCD22E /* Roboto-BoldItalic.ttf */,
+				A70194DC2C2AE0B800FCD22E /* Roboto-Italic.ttf */,
+				A70194D22C2AE0B700FCD22E /* Roboto-Light.ttf */,
+				A70194D82C2AE0B700FCD22E /* Roboto-LightItalic.ttf */,
+				A70194DA2C2AE0B800FCD22E /* Roboto-Medium.ttf */,
+				A70194D72C2AE0B700FCD22E /* Roboto-MediumItalic.ttf */,
+				A70194D42C2AE0B700FCD22E /* Roboto-Regular.ttf */,
+				A70194D62C2AE0B700FCD22E /* Roboto-Thin.ttf */,
+				A70194DB2C2AE0B800FCD22E /* Roboto-ThinItalic.ttf */,
+			);
+			path = Roboto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,9 +472,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70194DF2C2AE0B800FCD22E /* Roboto-BoldItalic.ttf in Resources */,
 				A70194722C2ACA9000FCD22E /* LaunchScreen.storyboard in Resources */,
+				A70194CA2C2AE0A000FCD22E /* Inter-Light.ttf in Resources */,
 				A701946F2C2ACA9000FCD22E /* Assets.xcassets in Resources */,
+				A70194CF2C2AE0A000FCD22E /* Inter-ExtraBold.ttf in Resources */,
+				A70194E62C2AE0B800FCD22E /* Roboto-Medium.ttf in Resources */,
+				A70194CC2C2AE0A000FCD22E /* Inter-SemiBold.ttf in Resources */,
+				A70194B72C2ADB9D00FCD22E /* GeneralButton.xib in Resources */,
+				A70194E12C2AE0B800FCD22E /* Roboto-BlackItalic.ttf in Resources */,
+				A70194C92C2AE0A000FCD22E /* Inter-ExtraLight.ttf in Resources */,
+				A70194E82C2AE0B800FCD22E /* Roboto-Italic.ttf in Resources */,
+				A70194D12C2AE0A000FCD22E /* Inter-Black.ttf in Resources */,
+				A70194CD2C2AE0A000FCD22E /* Inter-Bold.ttf in Resources */,
+				A70194E72C2AE0B800FCD22E /* Roboto-ThinItalic.ttf in Resources */,
+				A70194E92C2AE0B800FCD22E /* Roboto-Bold.ttf in Resources */,
+				A70194E52C2AE0B800FCD22E /* Roboto-Black.ttf in Resources */,
+				A70194E42C2AE0B800FCD22E /* Roboto-LightItalic.ttf in Resources */,
+				A70194D02C2AE0A000FCD22E /* Inter-Thin.ttf in Resources */,
+				A70194AA2C2AD34600FCD22E /* LoginView.xib in Resources */,
+				A70194CE2C2AE0A000FCD22E /* Inter-Regular.ttf in Resources */,
+				A70194E22C2AE0B800FCD22E /* Roboto-Thin.ttf in Resources */,
+				A70194DE2C2AE0B800FCD22E /* Roboto-Light.ttf in Resources */,
+				A70194B22C2ADB7800FCD22E /* GeneralTextField.xib in Resources */,
+				A70194E02C2AE0B800FCD22E /* Roboto-Regular.ttf in Resources */,
 				A701946D2C2ACA8F00FCD22E /* Main.storyboard in Resources */,
+				A70194CB2C2AE0A000FCD22E /* Inter-Medium.ttf in Resources */,
+				A70194E32C2AE0B800FCD22E /* Roboto-MediumItalic.ttf in Resources */,
+				A70194BC2C2ADBE000FCD22E /* NavigationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,10 +566,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70194BA2C2ADBD500FCD22E /* NavigationView.swift in Sources */,
+				A70194AB2C2AD34600FCD22E /* LoginEntity.swift in Sources */,
+				A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */,
+				A70194A62C2AD34600FCD22E /* LoginPresenter.swift in Sources */,
 				A701949C2C2AD08C00FCD22E /* ApiManager.swift in Sources */,
 				A701946A2C2ACA8F00FCD22E /* ViewController.swift in Sources */,
+				A70194B52C2ADB9400FCD22E /* GeneralButton.swift in Sources */,
+				A70194B02C2ADB6900FCD22E /* GeneralTextField.swift in Sources */,
+				A70194AD2C2AD5ED00FCD22E /* UIColor+Ext.swift in Sources */,
+				A70194A92C2AD34600FCD22E /* LoginView.swift in Sources */,
 				A70194662C2ACA8F00FCD22E /* AppDelegate.swift in Sources */,
+				A70194A82C2AD34600FCD22E /* LoginInteractor.swift in Sources */,
 				A70194682C2ACA8F00FCD22E /* SceneDelegate.swift in Sources */,
+				A70194A72C2AD34600FCD22E /* LoginRouter.swift in Sources */,
 				A701949E2C2AD09800FCD22E /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
