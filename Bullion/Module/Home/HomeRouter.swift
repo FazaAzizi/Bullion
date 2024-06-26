@@ -38,6 +38,7 @@ class HomeRouter {
     
     func logOut(nav: UINavigationController) {
         let vc = LoginRouter().showView()
+        UserDefaults.standard.removeObject(forKey: "bearerToken")
         nav.pushViewController(vc, animated: true)
     }
 }

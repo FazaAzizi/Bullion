@@ -46,8 +46,9 @@ extension PopupDetail {
             emailLbl.text = data.email
             phoneNumbLbl.text = data.phone
             genderLbl.text = data.gender
-            dobLbl.text = data.dateOfBirth
+            dobLbl.text = formatDateString(data.dateOfBirth)
             addressLbl.text = data.address
+            profileImgView.setImage(fromBase64: data.photo)
         }
         
         setupAction()

@@ -18,11 +18,12 @@ class LoginRouter {
     }
     
     func goToHome() {
-        let vc = HomeRouter().showView()
+        let homeViewController = HomeRouter().showView()
+        let navigationController = UINavigationController(rootViewController: homeViewController)
         
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let window = windowScene.windows.first {
-            window.rootViewController = vc
+            window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
     }

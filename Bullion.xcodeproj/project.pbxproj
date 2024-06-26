@@ -72,6 +72,7 @@
 		A789C76B2C2B3D4700EB9968 /* PopupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C7692C2B3D4700EB9968 /* PopupDetail.swift */; };
 		A789C76C2C2B3D4700EB9968 /* PopupDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789C76A2C2B3D4700EB9968 /* PopupDetail.xib */; };
 		A789C76E2C2B530800EB9968 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C76D2C2B530800EB9968 /* String+Ext.swift */; };
+		A789C7702C2BF72100EB9968 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C76F2C2BF72100EB9968 /* UIImageView+Ext.swift */; };
 		A78AA4382C2B107100A63D1C /* UserListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78AA4362C2B107100A63D1C /* UserListTVC.swift */; };
 		A78AA4392C2B107100A63D1C /* UserListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78AA4372C2B107100A63D1C /* UserListTVC.xib */; };
 /* End PBXBuildFile section */
@@ -162,6 +163,7 @@
 		A789C7692C2B3D4700EB9968 /* PopupDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDetail.swift; sourceTree = "<group>"; };
 		A789C76A2C2B3D4700EB9968 /* PopupDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupDetail.xib; sourceTree = "<group>"; };
 		A789C76D2C2B530800EB9968 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		A789C76F2C2BF72100EB9968 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		A78AA4362C2B107100A63D1C /* UserListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTVC.swift; sourceTree = "<group>"; };
 		A78AA4372C2B107100A63D1C /* UserListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTVC.xib; sourceTree = "<group>"; };
 		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +286,7 @@
 				A70194ED2C2AE80700FCD22E /* UIFont+Ext.swift */,
 				A70195012C2AFED400FCD22E /* GesturePublisher.swift */,
 				A789C76D2C2B530800EB9968 /* String+Ext.swift */,
+				A789C76F2C2BF72100EB9968 /* UIImageView+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */,
 				A70194A62C2AD34600FCD22E /* LoginPresenter.swift in Sources */,
 				A776BFCB2C2B07A4004B08D3 /* HomeEntity.swift in Sources */,
+				A789C7702C2BF72100EB9968 /* UIImageView+Ext.swift in Sources */,
 				A789C76E2C2B530800EB9968 /* String+Ext.swift in Sources */,
 				A701949C2C2AD08C00FCD22E /* ApiManager.swift in Sources */,
 				A776BFC82C2B07A4004B08D3 /* HomeInteractor.swift in Sources */,

@@ -35,7 +35,8 @@ class UserListTVC: UITableViewCell {
 extension UserListTVC {
     func configureCell(data: UserModel){
         nameLbl.text = data.name
-        dateLbl.text = data.dateOfBirth
+        dateLbl.text = formatDateString(data.dateOfBirth)
         emailLbl.text = data.email
+        profileImgView.setImage(fromBase64: data.photo)
     }
 }

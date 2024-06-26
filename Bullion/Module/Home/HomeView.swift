@@ -17,6 +17,7 @@ class HomeView: UIViewController {
     @IBOutlet weak var addUserButton: GeneralButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var isLoading = false
     var presenter: HomePresenter?
     var anyCancellable = Set<AnyCancellable>()
     var userList: [UserModel] = []
@@ -51,6 +52,7 @@ extension HomeView {
         setupCollectionView()
         setupAction()
         bindingData()
+        presenter?.fetchUsersList()
     }
     
     private func setupTableView() {
@@ -77,8 +79,11 @@ extension HomeView {
         presenter.$usersList
             .sink { [weak self] data in
                 guard let self else { return }
-                self.userList = data
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.userList = data
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                }
             }
             .store(in: &anyCancellable)
     }
@@ -131,6 +136,26 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         
         presenter.showPopupDetail(nav: navigation, data: userList[indexPath.row], delegate: self)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == self.tableView {
+            let position = scrollView.contentOffset.y
+            let contentHeight = scrollView.contentSize.height
+            let tableViewHeight = scrollView.frame.size.height
+            
+            if position > contentHeight - tableViewHeight * 2 {
+                if let presenter = self.presenter, !presenter.isLoading, presenter.hasMoreData {
+                    presenter.fetchUsersList()
+                }
+            }
+        } else {
+            let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+            let pageWidth = layout.itemSize.width + layout.minimumLineSpacing
+            let offset = scrollView.contentOffset.x + layout.sectionInset.left - 20
+            let page = Int(round(offset / pageWidth))
+            pageControl.currentPage = page
+        }
+     }
 }
 
 extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -157,14 +182,6 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let pageWidth = layout.itemSize.width + layout.minimumLineSpacing
-        let offset = scrollView.contentOffset.x + layout.sectionInset.left - 20
-        let page = Int(round(offset / pageWidth))
-        pageControl.currentPage = page
     }
 }
 

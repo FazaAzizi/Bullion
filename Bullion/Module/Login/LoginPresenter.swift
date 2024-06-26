@@ -29,6 +29,7 @@ class LoginPresenter {
             }, receiveValue: { loginResponse in
                 DispatchQueue.main.async {
                     if loginResponse.message.lowercased() == "login success" {
+                        UserDefaults.standard.set(loginResponse.data.token, forKey: "bearerToken")
                         self.router.goToHome()
                     }
                 }

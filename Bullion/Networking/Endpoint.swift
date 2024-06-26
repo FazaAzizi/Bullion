@@ -11,7 +11,7 @@ import Alamofire
 enum Endpoint {
     case login(email: String, password: String)
     case register
-    case getuserlist
+    case getuserlist(offset: Int, limit: Int)
     case getdetailuser
     case updateuser
     case deleteuser
@@ -25,8 +25,8 @@ extension Endpoint {
             return "v1/auth/login"
         case .register:
             return "v1/auth/register"
-        case .getuserlist:
-            return "v1/admin"
+        case .getuserlist(let offset, let limit):
+            return "v1/admin?offset=\(offset)&limit=\(limit)"
         case .getdetailuser:
             return "v1/admin"
         case .updateuser:
@@ -70,10 +70,10 @@ extension Endpoint {
     var header: HTTPHeaders {
         switch self {
         case .deleteuser, .getdetailuser, .getuserlist, .updateuser :
-            let token = "your_bearer_token_here"
+            let token = UserDefaults.standard.string(forKey: "bearerToken")
             let params: HTTPHeaders = [
                 "Accept": "*/*",
-                "Authorization": "Bearer \(token)"
+                "Authorization": "Bearer \(token ?? "")"
             ]
             return params
         default:
