@@ -12,6 +12,6 @@ class HomeInteractor {
     open var api = ApiManager()
 
     func fetchUsersList(offset: Int, limit: Int) -> AnyPublisher<HomeResponse, Error> {
-        return api.requestApiPublisher(.getuserlist(offset: offset, limit: limit))
+        return api.requestApiPublisherNew(.getuserlist(offset: offset, limit: limit))
     }
 }

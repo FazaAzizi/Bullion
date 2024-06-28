@@ -226,6 +226,19 @@ extension FormUserView {
         
         if presenter?.type == .add {
             if validationResult.isValid {
+                var firstName = ""
+                var lastName = ""
+
+                if let name = nameTxtField.textField.text {
+                    let names = name.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
+                    if names.count >= 1 {
+                        firstName = String(names[0])
+                    }
+                    if names.count >= 2 {
+                        lastName = String(names[1])
+                    }
+                }
+                
                 let data = UserModel(
                     id: "",
                     gender: gender == 1 ? "male" : "female",
@@ -236,8 +249,8 @@ extension FormUserView {
                     phone: phoneNumbTxtField.textField.text ?? "",
                     address: addressTxtField.textField.text ?? "",
                     password: passwordTxtField.textField.text ?? "",
-                    firstName: "",
-                    lastName: ""
+                    firstName: firstName,
+                    lastName: lastName
                 )
                 
                 self.presenter?.fetchRegister(data: data)
@@ -315,7 +328,7 @@ extension FormUserView {
     private func showAlertSuccesss() {
         let alert = UIAlertController(title: "Registration Success", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            print("OK button tapped")
+            self.navigationController?.popViewController(animated: false)
         }))
         present(alert, animated: true, completion: nil)
     }

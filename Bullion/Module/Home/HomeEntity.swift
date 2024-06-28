@@ -34,7 +34,6 @@ struct UserModel: Codable {
     
     var dictionaryRepresentation: [String: Any] {
         var dictionary: [String: Any] = [
-            "id": id,
             "first_name": firstName ?? "",
             "last_name": lastName ?? "",
             "gender": gender,

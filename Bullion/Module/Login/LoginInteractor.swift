@@ -12,6 +12,6 @@ class LoginInteractor {
     open var api = ApiManager()
 
     func fetchLogin(email: String, password: String) -> AnyPublisher<LoginResponse, Error> {
-        return api.requestApiPublisher(.login(email: email, password: password.sha256()))
+        return api.requestApiPublisherNew(.login(email: email, password: password.sha256()))
     }
 }
