@@ -10,10 +10,10 @@ import Alamofire
 
 enum Endpoint {
     case login(email: String, password: String)
-    case register
+    case register(data: UserModel)
     case getuserlist(offset: Int, limit: Int)
     case getdetailuser
-    case updateuser
+    case updateuser(data: UserModel)
     case deleteuser
 }
 
@@ -29,10 +29,21 @@ extension Endpoint {
             return "v1/admin?offset=\(offset)&limit=\(limit)"
         case .getdetailuser:
             return "v1/admin"
-        case .updateuser:
-            return "v1/admin"
+        case .updateuser(let data):
+            return "v1/admin/\(data.id)/update"
         case .deleteuser:
             return "v1/admin"
+        }
+    }
+}
+
+extension Endpoint {
+    func data() -> Any {
+        switch self {
+        case .register(let data):
+            return data
+        default:
+            return [:] 
         }
     }
 }
@@ -41,8 +52,10 @@ extension Endpoint {
 extension Endpoint {
     func method() -> HTTPMethod {
         switch self {
-        case .login:
+        case .login, .register:
             return .post
+        case .updateuser:
+            return .put
         default:
             return .get
         }
@@ -59,6 +72,10 @@ extension Endpoint {
                 "password": password
             ]
             return params
+        case .updateuser(let data):
+            return data.dictionaryRepresentationUpdate
+        case .register(let data):
+            return data.dictionaryRepresentation
         default:
             return nil
         }

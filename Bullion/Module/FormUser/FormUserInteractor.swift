@@ -6,10 +6,17 @@
 //
 
 import Foundation
+import Combine
 
 class FormUserInteractor {
     
-    // func fetchData(completion: @escaping (Result<ModelResponse, Error>) -> Void) {
-    //    api.requestApi(.exampleEndpoint, completion: completion)
-    // }
+    open var api = ApiManager()
+
+    func fetchRegister(data: UserModel) -> AnyPublisher<RegisterResponse, Error> {
+        return api.requestApiPublisher(.register(data: data), isHaveFile: true)
+    }
+    
+    func fetchUpdateUser(data: UserModel) -> AnyPublisher<UpdateResponse, Error> {
+        return api.requestApiPublisherNew(.updateuser(data: data))
+    }
 }

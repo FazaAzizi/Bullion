@@ -30,6 +30,7 @@ class HomeView: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        fetchUsers()
     }
 }
 
@@ -52,6 +53,10 @@ extension HomeView {
         setupCollectionView()
         setupAction()
         bindingData()
+    }
+    
+    private func fetchUsers() {
+        presenter?.resetFetchState()
         presenter?.fetchUsersList()
     }
     

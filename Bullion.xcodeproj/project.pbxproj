@@ -73,6 +73,7 @@
 		A789C76C2C2B3D4700EB9968 /* PopupDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789C76A2C2B3D4700EB9968 /* PopupDetail.xib */; };
 		A789C76E2C2B530800EB9968 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C76D2C2B530800EB9968 /* String+Ext.swift */; };
 		A789C7702C2BF72100EB9968 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C76F2C2BF72100EB9968 /* UIImageView+Ext.swift */; };
+		A789C7722C2BFD0400EB9968 /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789C7712C2BFD0400EB9968 /* FormValidator.swift */; };
 		A78AA4382C2B107100A63D1C /* UserListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78AA4362C2B107100A63D1C /* UserListTVC.swift */; };
 		A78AA4392C2B107100A63D1C /* UserListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78AA4372C2B107100A63D1C /* UserListTVC.xib */; };
 /* End PBXBuildFile section */
@@ -164,6 +165,7 @@
 		A789C76A2C2B3D4700EB9968 /* PopupDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupDetail.xib; sourceTree = "<group>"; };
 		A789C76D2C2B530800EB9968 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		A789C76F2C2BF72100EB9968 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		A789C7712C2BFD0400EB9968 /* FormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
 		A78AA4362C2B107100A63D1C /* UserListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTVC.swift; sourceTree = "<group>"; };
 		A78AA4372C2B107100A63D1C /* UserListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTVC.xib; sourceTree = "<group>"; };
 		AF630B1F80E7FAFD784C1061 /* Pods_Bullion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bullion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -428,6 +430,7 @@
 				A70194F52C2AF51500FCD22E /* FormUserView.swift */,
 				A70194F62C2AF51500FCD22E /* FormUserView.xib */,
 				A70194F72C2AF51500FCD22E /* FormUserEntity.swift */,
+				A789C7712C2BFD0400EB9968 /* FormValidator.swift */,
 			);
 			path = FormUser;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				A70194F92C2AF51500FCD22E /* FormUserRouter.swift in Sources */,
 				A70194AB2C2AD34600FCD22E /* LoginEntity.swift in Sources */,
 				A70194EB2C2AE3D900FCD22E /* UIView+Ext.swift in Sources */,
+				A789C7722C2BFD0400EB9968 /* FormValidator.swift in Sources */,
 				A70194A62C2AD34600FCD22E /* LoginPresenter.swift in Sources */,
 				A776BFCB2C2B07A4004B08D3 /* HomeEntity.swift in Sources */,
 				A789C7702C2BF72100EB9968 /* UIImageView+Ext.swift in Sources */,

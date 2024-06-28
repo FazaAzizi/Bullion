@@ -27,6 +27,13 @@ class HomePresenter {
         self.interactor = interactor
     }
     
+    func resetFetchState() {
+        self.offset = 0
+        self.hasMoreData = true
+        self.isLoading = false
+        self.usersList.removeAll()
+    }
+    
     func fetchUsersList() {
         guard hasMoreData, !isLoading else { return }
         isLoading = true

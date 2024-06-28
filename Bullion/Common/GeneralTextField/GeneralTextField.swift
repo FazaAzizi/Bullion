@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import Combine
+
+protocol GeneralTextFieldDelegate: AnyObject {
+    func didTapTxtField(_ view: UIView)
+}
 
 class GeneralTextField: UIView {
     @IBOutlet weak var titleTxtField: GradientLabel!
@@ -15,6 +20,8 @@ class GeneralTextField: UIView {
     @IBOutlet weak var containerImgView: UIView!
     @IBOutlet weak var eyeImgVw: UIImageView!
     
+    var anyCancellable = Set<AnyCancellable>()
+    var delegate: GeneralTextFieldDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,10 +61,13 @@ extension GeneralTextField {
             calendarImgVw.isHidden = false
             containerImgView.isHidden = true
             textField.isEnabled = false
+            setupAction()
         case .link:
             containerImgView.isHidden = false
             calendarImgVw.isHidden = true
             textField.isEnabled = false
+            textField.textColor = UIColor.titleLink
+            setupAction()
             eyeImgVw.image = UIImage(named: "ic_attechment")
         }
         
@@ -78,6 +88,17 @@ extension GeneralTextField {
         
         containerTxtField.addBorder(width: 1, colorBorder: UIColor.placeholder.cgColor)
         containerTxtField.makeCornerRadius(24)
+    }
+    
+    private func setupAction() {
+        containerTxtField.gesture()
+            .sink { [weak self] _ in
+                guard let self = self,
+                      let delegate = delegate
+                else { return }
+                delegate.didTapTxtField(self)
+            }
+            .store(in: &anyCancellable)
     }
 }
 

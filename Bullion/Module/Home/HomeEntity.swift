@@ -15,13 +15,50 @@ struct HomeResponse: Codable {
 }
 
 struct UserModel: Codable {
-    let id, name, gender, dateOfBirth: String
+    let id, gender, dateOfBirth: String
+    let name: String?
     let email, photo, phone, address: String
+    let password: String?
+    let firstName: String?
+    let lastName: String?
 
+    
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case name, gender
         case dateOfBirth = "date_of_birth"
-        case email, photo, phone, address
+        case email, photo, phone, address, password
+        case firstName = "first_name"
+        case lastName = "last_name"
+    }
+    
+    var dictionaryRepresentation: [String: Any] {
+        var dictionary: [String: Any] = [
+            "id": id,
+            "first_name": firstName ?? "",
+            "last_name": lastName ?? "",
+            "gender": gender,
+            "date_of_birth": dateOfBirth,
+            "email": email,
+            "phone": phone,
+            "address": address
+        ]
+        if let password = password {
+            dictionary["password"] = password.sha256()
+        }
+        return dictionary
+    }
+    
+    var dictionaryRepresentationUpdate: [String: Any] {
+        var dictionary: [String: Any] = [
+            "first_name": firstName ?? "",
+            "last_name": lastName ?? "",
+            "gender": gender,
+            "date_of_birth": dateOfBirth,
+            "email": email,
+            "phone": phone,
+            "address": address
+        ]
+        return dictionary
     }
 }
